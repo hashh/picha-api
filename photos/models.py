@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Photo(models.Model):
-    fulfilled_on = models.DateTimeField("Fulfilled on", auto_now=True, blank=False)
+    fulfilled_on = models.DateTimeField("Fulfilled on")
     created_on = models.DateTimeField("Created on", auto_now_add=True)
     updated_on = models.DateTimeField("Updated on", auto_now=True)
     title = models.CharField("Title", max_length=255)

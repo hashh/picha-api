@@ -35,7 +35,7 @@ def save_latest_flickr_image():
             title=flickr_image['title'],
             link=flickr_image['link'],
             image_url=flickr_image['media']['m'],
-            description=flickr_image['description']
-            fulfilled_on=flickr_image['published']
+            description=flickr_image['description'],
+            fulfilled_on=flickr_image['date_taken']
         )
         photo.save()
