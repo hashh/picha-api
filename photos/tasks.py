@@ -8,7 +8,7 @@ logger = get_task_logger(__name__)
 
 
 @periodic_task(
-    run_every=(crontab(minute='*/15')),
+    run_every=(crontab(minute='*/1')),
     name="task_save_latest_flickr_image",
     ignore_result=True
 )
