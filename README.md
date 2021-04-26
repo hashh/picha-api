@@ -33,6 +33,3 @@ Repita este para o pip3 por garantia.
 	* celery -A picha beat -l info
 
  - Esta rotina está configurada para buscar uma imagem a cada minuto, a fim de que os testes sejam mais rápidos. Caso queira aumentar o tempo, acesse o arquivo tasks.py no app photos e altere o tempo em "run_every=(crontab(minute='*/1')),".
-
-
-foi necessário atualizar as dependencias por conta da ultima versao do redis. Então celery e suas dependências tbm estão em versões superiores.
