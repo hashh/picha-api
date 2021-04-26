@@ -97,10 +97,26 @@ TEMPLATES = [
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+
+# Configuração de acesso ao database SQLite padrão
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
+
+
+# configuração de acesso ao novo banco de dados Mysql
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'picha',
+        'USER': 'picha',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
