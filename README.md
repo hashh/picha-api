@@ -23,9 +23,12 @@ Procedimentos para que a api possa rodar na sua máquina linux:
 	* git clone https://github.com/hashh/picha-api.git
  - Vamos ativar o venv. Abra o terminal na pasta de criação do venv e digite: source .venv/bin/activate
 
-  - Após clonar o repositório e ativarmos o venv, precisamos instala as dependendias e rodar as migrations do projeto. Existe a possibilidade de ocorrer um erro ao instalar as dependências, precisamos ter certeza que um pacote esta presente. Rodaremos o seguinte comando: "pip install wheel"
-Repita este para o pip3 por garantia.
- - Agora, para instalarmos as dependências, rodaremos o seguinte comando dentro da pasta raiz da API: pip install -r requeriments.txt
+  - Após clonar o repositório e ativarmos o venv, precisamos instala as dependendias e rodar as migrations do projeto. Existe a possibilidade de ocorrer um erro ao instalar as dependências, precisamos ter certeza que um pacote esta presente. Rodaremos o seguinte comando: "pip install wheel", Repita este para o pip3 por garantia.
+ - Precisamos instalar alguns requisitos antes do próximo passo:
+ 	* instalado via apt install >
+ 		* sudo apt install python3-dev
+		* sudo apt install libmysqlclient-dev; OBS: Caso libmysqlclient-dev retorne `não tem candidato à instalação`, substitua por default-libmysqlclient-dev.
+ - Agora, para instalarmos as dependências, rodaremos o seguinte comando dentro da pasta raiz da API: pip install -r requirements.txt
  - Antes de rodarmos as migrations para alimentarmos nosso DB, teremos as seguintes opções:
 	* Configuramos o Mysql para que o mesmo possa ser utilizado...[]
 	* ou podemos utilizar por padrão o Sqlite.
@@ -33,8 +36,7 @@ Repita este para o pip3 por garantia.
 		* Database chamado "picha"
 		* Usuário "picha" senha: 123456
 		- Você pode ver estas configurações em "picha/settings.py > DATABASES". Para utilizar o Mysql, você deverá então tê-lo instalado. No topo do documento existe um tutorial.
-		- Existem alguns requisitos que sua máquina pode precisar para a instalação e funcionamento do comando "migrate" posteriomente, são eles:
-			* instalado via apt install > libmysqlclient-dev e python3-dev;
+			
 		- Após isso, você terá todas dependencias necessárias para rodar o "migrate".
 
 	Caso queira utilizar o Sqlite, basta procurar em "picha/settings.py > DATABASES", logo acima da declaração das config do mysql, teremos a configuração do Sqlite comentada. Basta descomentar, remover a config do mysql e voilá.
