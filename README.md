@@ -1,6 +1,6 @@
 API:
 
-API Picha 2.0.4.
+API Picha 2.0
 
 Pré requisitos:
  * Python3;
