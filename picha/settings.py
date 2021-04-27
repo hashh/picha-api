@@ -99,7 +99,6 @@ TEMPLATES = [
 
 
 # Configuração de acesso ao database SQLite padrão
-
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
@@ -108,7 +107,7 @@ TEMPLATES = [
 #}
 
 
-# configuração de acesso ao novo banco de dados Mysql
+# Configuração de acesso ao novo banco de dados Mysql
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
