@@ -44,6 +44,10 @@ Procedimentos para que a api possa rodar na sua máquina linux:
  - Agora rodaremos as migrations com o comando: python3 manage.py migrate.
  - Prontinho. Basta rodar o servidor para ter acesso a API: python3 manage.py runserver.
 
+ - Precisamos subir nosso Redis(Um dos requisitos para roda o celery posteriormente, ele funciona como message broker), executamos no terminal:
+ 	* redis-server
+ 	* Para verificar se esta rodando: redis-cli ping
+
  - O projeto Picha, possui um "asynchronous task queue/job", chamado Celery, que é responsável por rodar rotinas periodicamente. Estas rotinas irão inserir a última imagem do Flickr(utilizando a Flickr API). Para rodarmos essas rotinas, precisamos executar os seguintes comandos, um em cada terminal separadamente(Precisamos estar dentro do nosso venv para tal):
 	* celery -A picha worker -l info
 	* celery -A picha beat -l info
