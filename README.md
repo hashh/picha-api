@@ -1,6 +1,7 @@
 API:
 
-API Picha 2.0
+API Picha 2.0 / Implementação e melhoria do projeto Picha, migrando para vue(front) e REST.
+O Projeto consiste em uma aplicação que possui uma galeria de imagens que são buscadas periodicamente do Flickr.
 
 Pré requisitos:
  * Python3;
